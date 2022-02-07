@@ -125,7 +125,6 @@ function check(str)
         mass = str.split(" ");
 
 
-
         //Проврка на ввод 1 символа слова
         for (let i = 0; i < mass.length; i++) //проверка на четную, если НЕЧЁТНАЯ то ошибка
         {
