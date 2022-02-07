@@ -124,33 +124,14 @@ function check(str)
     {
         mass = str.split(" ");
 
+
+
         //Проврка на ввод 1 символа слова
-        for (let i = 0; i < mass.length; i++) //проверка на букву
+        for (let i = 0; i < mass.length; i++) //проверка на четную, если НЕЧЁТНАЯ то ошибка
         {
-            if (mass[i][0] < 'a' || mass[i][0] > 'z')
+            if (mass[i][0] % 2 == 1 || mass[i][0] < '0' || mass[i][0] > '9' || mass[i].length != 4)
             {
-                error_text = 'Ошибка при вводе массива: ' + str + ' В элементе №' + mass[i];
-                mass = false;
-                break;
-            }
-        }
-
-
-        /*for (let i = 0; i < mass.length; i++) //проверка на цифру
-        {
-            if (mass[i][1] < '0' || mass[i][1] > '9' )
-            {
-                error_text = 'Ошибка при вводе массива: ' + str + ' В элементе №' + mass[i];
-                mass = false;
-                break;
-            }
-        }
-
-        for (let i = 0; i < mass.length; i++) //проверка на четную, если четная то ошибка
-        {
-            if (mass[i][2] % 2 == 0)
-            {
-                error_text = 'Ошибка при вводе массива: ' + str + ' В элементе №' + mass[i];
+                error_text = 'Ошибка при вводе массива: ' + str + ' В элементе ' + mass[i];
                 mass = false;
                 break;
             }
@@ -158,13 +139,34 @@ function check(str)
 
         for (let i = 0; i < mass.length; i++) //проверка на нечётную, если нечетная то ошибка
         {
-            if (mass[i][3] % 2 == 1)
+            if (mass[i][1] % 2 == 0 || mass[i][1] < '0' || mass[i][1] > '9' || mass[i].length != 4)
             {
-                error_text = 'Ошибка при вводе массива: ' + str + ' В элементе №' + mass[i];
+                error_text = 'Ошибка при вводе массива: ' + str + ' В элементе ' + mass[i];
                 mass = false;
                 break;
             }
-        }*/
+        }
+
+
+        for (let i = 0; i < mass.length; i++) //проверка на цифру
+        {
+            if (mass[i][2] < '0' || mass[i][2] > '9' || mass[i].length != 4)
+            {
+                error_text = 'Ошибка при вводе массива: ' + str + ' В элементе ' + mass[i];
+                mass = false;
+                break;
+            }
+        }
+
+        for (let i = 0; i < mass.length; i++) //проверка на цифру
+        {
+            if (mass[i][3] < '0' || mass[i][3] > '9' || mass[i].length != 4)
+            {
+                error_text = 'Ошибка при вводе массива: ' + str + ' В элементе ' + mass[i];
+                mass = false;
+                break;
+            }
+        }
     }
     else
         error_text = 'Вы ничего не ввели!';
@@ -195,10 +197,16 @@ function unification()
     let b = document.getElementById('mass2');
 
     if (check(a.value) == false)
-       alert(error_text);
+    {
+        alert(error_text);
+        return;
+    }
 
     if (check(b.value) == false)
-       alert(error_text);
+    {
+        alert(error_text);
+        return;
+    }
 
     deleteElement(a.value);
     result_1 = clear;
@@ -225,13 +233,21 @@ function intersection() // переделать 1,9,3,4,7,6,7    4,5,6,1,1,1,1,7
     let b = document.getElementById('mass2');
 
     if (check(a.value) == false)
+    {
         alert(error_text);
+        return;
+    }
 
     if (check(b.value) == false)
+    {
         alert(error_text);
+        return;
+    }
 
 
-    result_1 = a.value.split(" ");
+    //result_1 = a.value.split(" ");
+    deleteElement(a.value);
+    result_1 = clear;
     deleteElement(b.value);
     result_2 = clear;
     result_full = result_1.concat(result_2);
@@ -257,11 +273,15 @@ function addition()
     let b = document.getElementById('mass2');
 
     if (check(a.value) == false)
+    {
         alert(error_text);
-
+        return;
+    }
     if (check(b.value) == false)
+    {
         alert(error_text);
-
+        return;
+    }
 
     deleteElement(a.value);
     result_1 = clear;
@@ -291,11 +311,15 @@ function symmetricDifference()
     let b = document.getElementById('mass2');
 
     if (check(a.value) == false)
+    {
         alert(error_text);
-
+        return;
+    }
     if (check(b.value) == false)
+    {
         alert(error_text);
-
+        return;
+    }
 
     deleteElement(a.value);
     result_1 = clear;
