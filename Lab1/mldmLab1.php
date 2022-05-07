@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Моя 1 лаба</title>
-    <link rel = "stylesheet" href = "/styles/styles.css">
+    <link rel = "stylesheet" href = "/styles/Lab1_styles.css">
     <link rel = "stylesheet" href = "/styles/dark.css">
-    <script type = "text/javascript" src = "/scripts/scripts.js"></script>
+    <script type = "text/javascript" src = "/scripts/Lab1_scripts.js"></script>
 </head>
 <body>
     <h1>Л/р №1</h1>

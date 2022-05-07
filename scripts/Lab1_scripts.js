@@ -223,7 +223,7 @@ function unification()
 /*
     2 Функция пересечения
  */
-function intersection() // переделать 1,9,3,4,7,6,7    4,5,6,1,1,1,1,7         {1,4,7,6}
+function intersection()
 {
     let result_1 = [];
     let result_2 = [];

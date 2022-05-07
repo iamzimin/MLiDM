@@ -3,3 +3,11 @@ body
     background-color: #414141;
     color: #ffffff;
 }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+    color: red;
+}

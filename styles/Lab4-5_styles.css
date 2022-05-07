@@ -1,0 +1,17 @@
+
+.abc_vert {
+    position: absolute;
+
+    font-size: 2.5vw;
+    left: 48.7vw;
+    top: 13.7vw;
+}
+
+.abc_hor {
+    position: absolute;
+
+    font-size: 1.82vw;
+    left: 47vw;
+    top: 16.9vw;
+
+}

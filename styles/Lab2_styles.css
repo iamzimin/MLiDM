@@ -1,0 +1,38 @@
+form {
+    position: absolute;
+    display: inline-block;
+}
+
+textarea {
+    position: relative;
+    right: 300px;
+}
+
+h1 {
+    position: relative;
+    font-size: 50px;
+}
+
+h2 {
+    position: relative;
+}
+
+td {
+    position: relative;
+    font-size: 30px;
+}
+
+input {
+    position: relative;
+    font-size: 25px;
+}
+
+img.brd {
+    position: absolute;
+    left: 100px;
+    top: -250px;
+    width: 1460px;
+    height: 1100px;
+    display: inline-block;
+}
+
