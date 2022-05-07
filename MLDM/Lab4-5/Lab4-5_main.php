@@ -72,7 +72,7 @@ if ($numberLab == 4) {
             echo $x + 1;
             echo " ";
             echo $x + 1;
-            echo "<br>Этот индекс должен быть равен '*' <br>";
+            echo "<br>Этот индекс должен быть равен '0' <br>";
             $flag = false;
         }
         for ($y = 0; $y < $sizeMatrix; $y++) {
